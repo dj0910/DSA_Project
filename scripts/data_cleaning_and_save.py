@@ -1,7 +1,7 @@
 import pandas as pd
 import csv
 import numpy as np
-from ydata_profiling import ProfileReport
+#from ydata_profiling import ProfileReport
 
 '''
 Es gibt 319795 Einträge und 18 Attribute in dem Heart_2020-Datensatz. 
@@ -25,10 +25,14 @@ if(data_survey_counted.nunique() != 1):
 #Überprüfen, ob irgendwie ein na oder nan im Datensatz vorliegt, falls ja werde diese entfernt
 data_survey_dropped_na = data_survey.dropna(how="any")
 
+#Tage werden als int gespeichert, um spätere Darstellung besser zu veranschaulichen
+data_survey_dropped_na["PhysicalHealth"] = data_survey_dropped_na["PhysicalHealth"].astype(int) 
+data_survey_dropped_na["MentalHealth"] = data_survey_dropped_na["MentalHealth"].astype(int)
+
 #Speicherung von Dataframe als csv in Ordner data_clean
 data_survey_dropped_na.to_csv("resources\data_clean\heart_2020_clean.csv", index=False)
 
-profile_survey_scientific = ProfileReport(data_survey_dropped_na, title="Profiling Report")
+#profile_survey_scientific = ProfileReport(data_survey_dropped_na, title="Profiling Report")
 
 '''
 Es gibt 303 Einträge in dem heart_preditions-Datensatz mit 14 Attributen
@@ -104,4 +108,4 @@ data_scientific_renamed['thalassemia'][data_scientific_renamed['thalassemia'] ==
 #Speicherung von Dataframe als csv in Ordner data_clean
 data_scientific_renamed.to_csv("resources\data_clean\heart_predictions_clean.csv", index=False)
 
-profile_survey_scientific = ProfileReport(data_scientific_renamed, title="Profiling Report")
+#profile_survey_scientific = ProfileReport(data_scientific_renamed, title="Profiling Report")
