@@ -29,6 +29,48 @@ data_survey_dropped_na = data_survey.dropna(how="any")
 data_survey_dropped_na["PhysicalHealth"] = data_survey_dropped_na["PhysicalHealth"].astype(int) 
 data_survey_dropped_na["MentalHealth"] = data_survey_dropped_na["MentalHealth"].astype(int)
 
+#TODO: ALLE ENGLISCHSPRACHIGEN INFORMATIONEN AUS DEM DATENSATZ ÜBERSEZEN(WICHTIG FÜR GRAPHEN)
+
+data_survey_dropped_na["HeartDisease"][data_survey_dropped_na["HeartDisease"] == "Yes"] = "Ja"
+data_survey_dropped_na["HeartDisease"][data_survey_dropped_na["HeartDisease"] == "No"] = "Nein"
+data_survey_dropped_na["Smoking"][data_survey_dropped_na["Smoking"] == "Yes"] = "Ja"
+data_survey_dropped_na["Smoking"][data_survey_dropped_na["Smoking"] == "No"] = "Nein"
+data_survey_dropped_na["AlcoholDrinking"][data_survey_dropped_na["AlcoholDrinking"] == "Yes"] = "Ja"
+data_survey_dropped_na["AlcoholDrinking"][data_survey_dropped_na["AlcoholDrinking"] == "No"] = "Nein"
+data_survey_dropped_na["Stroke"][data_survey_dropped_na["Stroke"] == "Yes"] = "Ja"
+data_survey_dropped_na["Stroke"][data_survey_dropped_na["Stroke"] == "No"] = "Nein"
+data_survey_dropped_na["DiffWalking"][data_survey_dropped_na["DiffWalking"] == "Yes"] = "Ja"
+data_survey_dropped_na["DiffWalking"][data_survey_dropped_na["DiffWalking"] == "No"] = "Nein"
+data_survey_dropped_na["PhysicalActivity"][data_survey_dropped_na["PhysicalActivity"] == "Yes"] = "Ja"
+data_survey_dropped_na["PhysicalActivity"][data_survey_dropped_na["PhysicalActivity"] == "No"] = "Nein"
+data_survey_dropped_na["GenHealth"][data_survey_dropped_na["GenHealth"] == "Yes"] = "Ja"
+data_survey_dropped_na["GenHealth"][data_survey_dropped_na["GenHealth"] == "No"] = "Nein"
+data_survey_dropped_na["Asthma"][data_survey_dropped_na["Asthma"] == "Yes"] = "Ja"
+data_survey_dropped_na["Asthma"][data_survey_dropped_na["Asthma"] == "No"] = "Nein"
+data_survey_dropped_na["KidneyDisease"][data_survey_dropped_na["KidneyDisease"] == "Yes"] = "Ja"
+data_survey_dropped_na["KidneyDisease"][data_survey_dropped_na["KidneyDisease"] == "No"] = "Nein"
+data_survey_dropped_na["SkinCancer"][data_survey_dropped_na["SkinCancer"] == "Yes"] = "Ja"
+data_survey_dropped_na["SkinCancer"][data_survey_dropped_na["SkinCancer"] == "No"] = "Nein"
+data_survey_dropped_na["Sex"][data_survey_dropped_na["Sex"] == "Female"] = "Weiblich"
+data_survey_dropped_na["Sex"][data_survey_dropped_na["Sex"] == "Male"] = "Männlich"
+data_survey_dropped_na["AgeCategory"][data_survey_dropped_na["AgeCategory"] == "80 or older"] = "80 oder älter"
+data_survey_dropped_na["Diabetic"][data_survey_dropped_na["Diabetic"] == "No"] = "Nein"
+data_survey_dropped_na["Diabetic"][data_survey_dropped_na["Diabetic"] == "Yes"] = "Ja"
+data_survey_dropped_na["Diabetic"][data_survey_dropped_na["Diabetic"] == "No, borderline diabetes"] = "Nein, aber Frühdiabetes"
+data_survey_dropped_na["Diabetic"][data_survey_dropped_na["Diabetic"] == "Yes (during pregnancy)"] = "Ja, Schwangerschaftsdiabetes"
+data_survey_dropped_na["Race"][data_survey_dropped_na["Race"] == "White"] = "Weiß"
+data_survey_dropped_na["Race"][data_survey_dropped_na["Race"] == "Black"] = "Afroamerikanisch"
+data_survey_dropped_na["Race"][data_survey_dropped_na["Race"] == "Asian"] = "Asiatisch"
+data_survey_dropped_na["Race"][data_survey_dropped_na["Race"] == "Other"] = "Andere"
+data_survey_dropped_na["Race"][data_survey_dropped_na["Race"] == "Hispanic"] = "Hispanisch"
+data_survey_dropped_na["Race"][data_survey_dropped_na["Race"] == "American Indian/Alaskan Native"] = "Native American/Alaskan Native"
+data_survey_dropped_na["GenHealth"][data_survey_dropped_na["GenHealth"] == "Excellent"] = "Exzellent"
+data_survey_dropped_na["GenHealth"][data_survey_dropped_na["GenHealth"] == "Very good"] = "Sehr gut"
+data_survey_dropped_na["GenHealth"][data_survey_dropped_na["GenHealth"] == "Good"] = "Gut"
+data_survey_dropped_na["GenHealth"][data_survey_dropped_na["GenHealth"] == "Fair"] = "In Ordnung"
+data_survey_dropped_na["GenHealth"][data_survey_dropped_na["GenHealth"] == "Poor"] = "Schlecht"
+
+
 #Speicherung von Dataframe als csv in Ordner data_clean
 data_survey_dropped_na.to_csv("resources\data_clean\heart_2020_clean.csv", index=False)
 
