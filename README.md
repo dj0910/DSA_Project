@@ -7,7 +7,7 @@ Das Ziel ist es hierbei eine Präventionsstrategie für Herzkrankheiten zu entwi
 2. [Projektbeschreibung](#Projektbeschreibung)
 3. [Parameterbewertung](#Parameterbewertung)
     1. [Parameterübersicht](#Parameterubersicht)
-    2. [Manuelle Bewertung](#Manuelle-Bewertung) hier auf die docs/Heart_2020 etc hinweisen
+    2. [Manuelle Bewertung](#Manuelle-Bewertung)
     3. [PCA](#PCA)
     4. [Fazit](#Fazit)
 4. [Genutztes statistisches Modell](#Genutztes-statistisches-Modell)
