@@ -4,6 +4,8 @@ Das Ziel ist es hierbei eine Präventionsstrategie für Herzkrankheiten zu entwi
 
 # Inhaltsverzeichnis
 1. [Repo-Navigation](#Repo-Navigation)
+    1. [Übersicht](#Uebersicht)
+    2. [Installationsanleitung](#Installationsanleitung)
 2. [Projektbeschreibung](#Projektbeschreibung)
 3. [Parameterbewertung](#Parameterbewertung)
     1. [Parameterübersicht](#Parameterubersicht)
@@ -13,6 +15,8 @@ Das Ziel ist es hierbei eine Präventionsstrategie für Herzkrankheiten zu entwi
 4. [Genutztes statistisches Modell](#Genutztes-statistisches-Modell)
 
 # Repo-Navigation
+
+## Übersicht
 In unserem Repository sind 3 Überordner zu finden:
 -  docs
 Der  "docs"-Ordner wird für jegliche Dokumentation, die im Laufe des Projekts anfällt, genutzt. Aktuell befinden sich dort zum Einen die Projektskizze, die das Projekt beschreibt und die Ziele definiert, diese soll jedoch im Verlauf des Projekts von dieser README-Datei ersetzt werden. Zum Anderen ist dort auch eine HTML-Datei zu finden, die sämtliche Graphen, Code und Erklärungen zu dem Hauptdatensatz enthalten, um die Informationen auch ohne clonen des Repos einsehen zu können. Dafür muss diese lediglich gedownloaded und dann geöffnet werden. Zuletzt befindet sich hier auch noch eine "requirements"-Datei, in der sich alle Libraries, die benötigt werden, befinden.
@@ -25,6 +29,24 @@ Unter Anderem sind hier die Datenbereinigung und -Speicherung, namens "data_clea
 Weiterhin liegt hier auch das Skript "Heart_2020_exploration_Visualization.ipynb, welches für die leichtere Lesbarkeit in Form eines Jupyter-Notebooks vorliegt. In diesem Skript sind sämtliche Graphen und Informationen zu finden, die dann daraus in die PDF in dem "docs"-Ordner exportiert wurden.
 Zuletzt liegt hier das Skript "pca_heart2020.py", in der der Datensatz nach den Hauptkomponenten analysiert wird.
 
+## Installationsanleitung
+**Voraussetzungen:**
+* Python Version 3.11.9
+* Jupyter Version 6.5.4
+
+**Installation:**
+1. Klonen Sie das Repository:
+```bash
+git clone https://github.com/dj0910/DSA_Project.git
+```
+2. Navigieren Sie zum Order
+```bash
+cd DSA_Project
+```
+3. Installieren Sie alle benötigten Packages
+```bash
+pip install -r requirements.txt
+```
 
 # Projektbeschreibung 
 Im Rahmen des Wahlpflichtmoduls Data Science and Analytics an der Hochschule Mannheim beschäfigen wir uns als Team Data Dazzlers, bestehend aus fünf Studierenden, intensiv mit dem Thema der Prävention von Herzkrankheiten. Diese Krankheiten zählen weltweit zu den führenden Todesursachen, wobei laut Angaben der Weltgesundheitsorganisation (WHO) bis zu 18 Millionen Menschen jährlich an ihnen sterben. In Deutschland allein sind jährlich etwa 350.000 Todesfälle aufgrund von Herz-Kreislauf-Erkrankungen zu verzeichnen, wie durch das statistische Bundesamt belegt wird. 

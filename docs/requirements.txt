@@ -5,3 +5,4 @@ matplotlib
 plotly
 plotly->express
 plotly->graph_objs
+xgboost
