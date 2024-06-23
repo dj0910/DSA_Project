@@ -45,7 +45,7 @@ cd DSA_Project
 ```
 3. Installieren Sie alle benötigten Packages
 ```bash
-pip install -r requirements.txt
+pip install -r docs/requirements.txt
 ```
 
 # Projektbeschreibung 
