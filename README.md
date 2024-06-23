@@ -9,11 +9,13 @@ Das Ziel ist es hierbei eine Präventionsstrategie für Herzkrankheiten zu entwi
 2. [Projektbeschreibung](#Projektbeschreibung)
 3. [Mögliche Lösungen für das Problem](#Mögliche-Lösungen-für-das-Problem)
 3. [Parameterbewertung](#Parameterbewertung)
-    1. [Parameterübersicht](#Parameterubersicht)
-    2. [Manuelle Bewertung](#Manuelle-Bewertung)
-    3. [PCA](#PCA)
-    4. [Fazit](#Fazit)
-4. [Genutztes statistisches Modell](#Genutztes-statistisches-Modell)
+    1. [Auswahl der Datenquelle](#Auswahl-der-Datenquelle)
+    2. [Parameterübersicht](#Parameterubersicht)
+    3. [Manuelle Bewertung](#Manuelle-Bewertung)
+    4. [PCA](#PCA)
+    5. [Fazit](#Fazit)
+4. [Architektur-Diagramm](#Architektur-Diagramm)
+5. [Genutztes statistisches Modell](#Genutztes-statistisches-Modell)
 
 # Repo-Navigation
 
@@ -52,7 +54,7 @@ pip install -r docs/requirements.txt
 ```
 
 # Projektbeschreibung 
-Im Rahmen des Wahlpflichtmoduls Data Science and Analytics an der Hochschule Mannheim beschäfigen wir uns als Team Data Dazzlers, bestehend aus fünf Studierenden, intensiv mit dem Thema der Prävention von Herzkrankheiten. Diese Krankheiten zählen weltweit zu den führenden Todesursachen, wobei laut Angaben der Weltgesundheitsorganisation (WHO) bis zu 18 Millionen([Quelle1]) Menschen jährlich an ihnen sterben. In Deutschland allein sind jährlich etwa 350.000 Todesfälle aufgrund von Herz-Kreislauf-Erkrankungen zu verzeichnen, wie durch das statistische Bundesamt belegt wird. 
+Im Rahmen des Wahlpflichtmoduls Data Science and Analytics an der Hochschule Mannheim beschäfigen wir uns als Team Data Dazzlers, bestehend aus fünf Studierenden, intensiv mit dem Thema der Prävention von Herzkrankheiten. Diese Krankheiten zählen weltweit zu den führenden Todesursachen, wobei laut Angaben der Weltgesundheitsorganisation (WHO) bis zu 18 Millionen[<sup>1</sup>](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)) Menschen jährlich an ihnen sterben. In Deutschland allein sind jährlich etwa 350.000 Todesfälle[<sup>2</sup>](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen/_inhalt.html) aufgrund von Herz-Kreislauf-Erkrankungen zu verzeichnen, wie durch das statistische Bundesamt belegt wird. 
 Die Prävention dieser Erkrankungen spielt eine entscheidende Rolle im Gesundheitsmanagement. Hierbei kommen moderne Technologien und insbesondere Wearables wie Smartwatches ins Spiel. Diese ermöglichen es einem Individuum, seine Gesundheitsdaten kontinuierlich zu messen und auf Grundlage dieser Informationen entsprechend zu handeln. 
 Das Team Data Dazzlers konzentriert sich darauf, eine Präventionsstrategie für Herzkrankheiten zu entwickeln und zu optimieren. Ein zentraler Ansatzpunkt dabei ist die Untersuchung 
 physikalischer Risikofaktoren, die durch Wearables messbar sind. Durch die Analyse und Auswertung dieser Daten können frühzeitig potenzielle Risiken erkannt und präventive Maßnahmen eingeleitet werden. Hierbei kommt modernste Data-Science-Technologie zum Einsatz, um die Zusammenhänge zwischen den gemessenen physikalischen Parametern und dem Risiko für Herzkrankheiten zu erforschen und zu verstehen. Das Ziel ist es, präzise und individualisierte Empfehlungen für die Gesundheitsvorsorge zu entwickeln, die auf den individuellen Risikoprofilen der Nutzer basieren.
@@ -65,9 +67,8 @@ Gleichzeitig können mithilfe von Wearables kontinuierlich Vitalwerte wie Herzfr
 Diese Empfehlungen können je nach Umsetzbarkeit von den Betroffenen selbst oder mithilfe des eigenen behandelnden Arztes realisiert werden. So können Betroffene aktiv ihren Lebensstil anpassen und gesundheitsschädigende Verhaltensmuster vermeiden. Diese proaktive Herangehensweise ermöglicht es, Herz-Kreislauf-Erkrankungen effektiv zu verhindern oder zumindest ihre Entwicklung zu verlangsamen.
 
 **2. Vermeidung/Aufklärung von Volkskrankheiten**
-Das Gesundheitssystem konzentriert sich immer mehr auf die kurative, sprich die heilende, als auf die präventive, sprich vorbeugende Medizin. Dadurch erkranken Menschen, die durch präventive Maßnahmen eigentlich nicht erkranken hätten müssen.
-Durch Projekte, die sich auf die Prävention von Krankheiten konzentrieren, kann also nicht nur dem Einzelnen geholfen werden, ein gesünderes und krankheitsfreies Leben zu führen, sondern auch der Bevölkerung als Gemeinschaft. Denn vor allem Volkskrankheiten, wie Diabetes, Adipositas und Herz-Kreislauf-Erkrankungen belasten nicht nur die Betroffenen, sondern auch unser Gesundheitssystem massiv, denn diese Erkrankungen sind meist nur
-der Anfang, auf den dann Folgeerkrankungen oder Sekundärerkrankungen folgen, durch die die Menschen noch kränker werden.
+Das Gesundheitssystem konzentriert sich immer mehr auf die kurative, sprich die heilende, als auf die präventive, sprich vorbeugende Medizin[<sup>3</sup>](https://www.pedocs.de/frontdoor.php?source_opus=10361). Dadurch erkranken Menschen, die durch präventive Maßnahmen eigentlich nicht erkranken hätten müssen.
+Durch Projekte, die sich auf die Prävention von Krankheiten konzentrieren, kann also nicht nur dem Einzelnen geholfen werden, ein gesünderes und krankheitsfreies Leben zu führen, sondern auch der Bevölkerung als Gemeinschaft. Denn vor allem Volkskrankheiten, wie Diabetes, Adipositas und Herz-Kreislauf-Erkrankungen belasten nicht nur die Betroffenen, sondern auch unser Gesundheitssystem massiv[<sup>4</sup>](https://www.uni-paderborn.de/fileadmin/psychisch-stark-am-arbeitsplatz/pdf/BDP-Bericht-2012.pdf), denn diese Erkrankungen sind meist nur der Anfang, auf den dann Folgeerkrankungen oder Sekundärerkrankungen folgen, durch die die Menschen noch kränker werden.
 
 **3. Sensibilisierung des Bewusstseins für die eigene Gesundheit**
 Dadurch, dass man in Arztpraxen nur noch schwer Termine bekommt und die Ärzte, wenn man dann mal einen Termin hat, unter massivem Zeitdruck stehen, fühlen sich viele Menschen im Gesundheitssystem übersehen und auch allein gelassen mit ihren Fragen und Sorgen.
@@ -88,12 +89,34 @@ Das Ziel ist es, eine prognostische Risikokurve für die zukünftige Entwicklung
 Risikoprofile erstellt werden.
 Diese Risikokurven sollen kontinuierlich aktualisiert und verfeinert werden, um zu zeigen, wie sich Verbesserungen oder Verschlechterungen der Risikofaktoren auf den Verlauf des Gesamtrisikos über die Zeit auswirken.
 
-# Hier weiter
+# SMART-Ziele 
+- **Spezifisch:** Ein Algorithmus soll mit hoher Wahrscheinlichkeit das Risiko, an einer Herz-Kreislauf-Erkrankung zu erkranken, vorhersagen können, wenn ihm die letzten 4 Wochen an Daten 
+eines Nutzers vorliegen. 
+- **Messbar:** Die Anzahl der gemiedenen Herz-Kreislauf-Erkrankungen soll gemessen werden. Ent-
+weder indem bereits Erkrankte ihre Daten bis zum Zeitpunkt der Erkrankung in das Modell 
+einspielen und testen, ob ein hohes Risiko ausgegeben wird, oder indem Risikobewertungen, 
+die das Modell ausgegeben hat, nachverfolgt werden. 
+- **Attraktiv:** Nutzer haben mehr Kontrolle über die eigene Gesundheit und können diese leichter 
+steuern und überwachen. 
+- **Realistisch:** Die Ziele des Projekts sind mit den vorhandenen Ressourcen erreichbar, da das 
+gesamte Semester an Zeit zur Verfügung steht und der Umfang des Projekts flexibel angepasst 
+werden kann, indem Must-haves, wie eine Risikobewertung und Nice-to-haves, wie eine Risi-
+kokurve, eine GUI, etc. definiert wurden. 
+- **Terminiert:** Das Projekt endet mit Abschluss des Moduls Data Science and Analytics.
 
 # Parameterbewertung
 
+## Auswahl der Datenquelle
+Die Entscheidung über die Datenquellen orientierte sich an der „Checkliste für Datenakquise“ und es war wichtig, eine Mischung aus primären und sekundären Datenquellen zu erhalten. 
+Leider gestaltete sich der Zugriff auf medizinische Daten schwierig, wodurch die Auswahl der Datensätze generell sehr eingeschränkt war. 
+Dabei wurde berücksichtigt, möglichst viele Attribute in den Datensätzen zu haben, um viele Risikofaktoren einzubeziehen und unterschiedlich gewichten zu können. Es war auch wichtig, keine leeren Beobachtungen in den Datensätzen zu haben, da sie den Datensatz verunreinigen können. 
+Auch ein Bias kann einen Datensatz verunreinigen, jedoch war es schwierig, Bias vollständig zu vermeiden. Im ausgewählten Datensatz gibt es einen Response-Bias, da es sich um eine Befragung handelt und nicht um wissenschaftlich erhobene Daten. 
+Dieser Bias tritt auf, wenn die Antworten in einer Umfrage oder Studie systematisch von bestimmten Faktoren beeinflusst werden, was zu einer Verzerrung der Ergebnisse führen kann. 
+In diesem Fall könnten persönliche Fragen zur sportlichen Aktivität, zum Gewicht und anderen Gewohnheiten die Befragten dazu bringen, unehrlich zu antworten und somit zu einem Response-Bias führen.
+Obwohl der Datensatz einen gewissen Bias aufweist, wurde er aufgrund seiner Aktualität (2023), seines Umfangs (über 300.000 Einträge) und der Vielzahl interessanter und gut messbarer Attribute ausgewählt.
+
 ## Parameterübersicht
-Hier sind nochmal alle vorhandenen Parameter aufgelistet.
+Hier sind alle vorhandenen Parameter aufgelistet.
 | Parametername  | Datenart      |
 | :-------------:  |:-------------:|
 | Herzerkrankung       | Kategoriell     |
@@ -138,6 +161,16 @@ Damit wäre man in der Lage, durch dieselbe Anwendung, die auch die regelmäßig
 Zum einen wird dadurch die Prävention und Früherkennung von Herz-Kreislauf-Erkrankungen gefördert, denn Alarmfunktionen bei zu hohem Risiko würden den Nutzer warnen, dass sein Risiko erhöht ist und ihn Aufforderung bewusst darauf zu achten und möglicherweise ärztliche Beratung aufzusuchen.
 Dadurch wird der Nutzer automatisch für die eigene Gesundheit sensibilisiert und es werden indirekt auch Volkskrankheiten vermieden.
 
+# Architektur-Diagramm
+In diesem Data-Science-Projekt zur Prävention von Herz-Kreislauf-Erkrankungen durchlaufen wir folgende Schritte: 
+1. Zunächst werden die Gesundheitsdaten aus der CSV-Datei gesammelt und in ein geeignetes Format überführt. (Im Diagramm sind noch 2 CSV-Dateien dargestellt, eine davon wurde aber aufgrund von nicht zielführeden Attributen verworfen)
+2. Anschließend werden die Daten auf fehlende Werte und Ausreißer überprüft und nötige Korrekturen und TransformaƟonen vorgenommen. Die gesäuberten Daten werden zusätzlich abgespeichert. Um die spätere Modellbewertung zu ermöglichen, werden die Daten in Trainings- und Testdatensätze aufgeteilt. 
+3. Mit den vorbereiteten Trainingsdaten trainieren wir ein Machine-Learning-Modell. Verschiedene Modelle können verglichen und dasjenige mit der besten Leistung ausgewählt werden. 
+4. Das ausgewählte Modell wird anhand des Testdatensatzes evaluiert, um seine allgemeine Vorhersagegenauigkeit zu bestimmen. Geeignete Metriken werden verwendet, um die Modellleistung zu quantifizieren. 
+5. Basierend auf den Ergebnissen des Modells interpretieren wir die Zusammenhänge zwischen den Risikofaktoren und der Erkrankungswahrscheinlichkeit. Das Modell kann dann eingesetzt werden, um neue Daten vorherzusagen oder weiterführende Erkenntnisse zu gewinnen.  
+
+![Architektur-Diagramm](docs/architecture_diagramm.png)
+
 # Genutztes statistisches Modell
 Als statistisches Modell wird die logistische Regression genutzt. Es wurde sich für dieses Modell entschieden, da der Großteil der Daten kategoriell ist und somit viele der im Unterricht vorgestellten Modelle nicht mehr mit den vorliegenden Daten zu vereinen waren.
 Allerdings wurde sich noch nicht fest auf die logistische Regression geeinigt und im Verlauf des Projekts kann es durchaus sein, dass auch alternative Modelle noch betrachtet werden, vor Allem wenn die Ergebnisse mit der logistischen Regression nicht die gewünschte Genauigkeit erbringen.
@@ -152,6 +185,6 @@ Allerdings wurde sich noch nicht fest auf die logistische Regression geeinigt un
 
 
 # Quellen
-[Quelle1]: https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)
+[](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds))
 
 [Quelle2]: 
