@@ -162,31 +162,31 @@ Folgende Parameter wurden durch die Datenanalyse und -visualisierung manuell als
 **Alterskategorie:**  
 Der Graph weist darauf hin, dass mit steigendem Alter die Wahrscheinlichkeit an einer Herzkrankheit zu erkranken um ein Vielfaches erhöht ist.
 Da der Prozentsatz in der Alterskategorie "80 oder älter" mehr als das 22-Fache der Kategorie "18-24" ist, ist die Alterskategorie als wichtiger Parameter für die Bewertung des Risikos zu sehen.
-  
+
 ![Alterskategorie-Graph](docs/AgeCategory.png)
 
 **Schlafdauer:**  
 Es ist eine wellenartige Form des Graphen zu erkennen, bei dem das Minimum bei 7 Stunden durchschnittlicher Schlafdauer liegt. Sowohl bei mehr als auch bei weniger Stunden Schlaf erhöht sich das Risiko an einer Herzkrankheit zu leiden stetig.
 Da der Unterschied bei bis zu 12% liegt, viele andere Schlafdauern ebenfalls erhöhte Wahrscheinlichkeiten zu erkranken aufweisen und die Schlafdauer eine einfach messbare Variable ist, wird sie mit hoher Signifikanz für die Bewertung des Risikos versehen.
-<Br>
+
 ![Alterskategorie-Graph](docs/SleepTime_plot.png)
 
 **Nierenerkrankung:**  
 Es existieren circa viermal so viele Herzerkrankte, die an einer Nierenerkrankung leiden, wie Nichtherzerkrankte, die an einer Nierenerkrankung leiden.
 Das deutet auf eine starke Korrelation zwischen Herzkrankheit und Nierenerkrankung hin, wodurch der Parameter "Nierenerkrankung" in Betracht gezogen werden kann.
-<Br>
+
 ![Alterskategorie-Graph](docs/KidneyDisease_plot.png)
 
 **Generelle Gesundheit:**  
 Die empfundene Gesundheit ist ein stark subjektiver Parameter. Jedoch ist der Unterschied zwischen dem besten und dem schlechtesten Gesundheitszustand so hoch, dass man hier trotzdem von einem signifikanten Parameter für die Bewertung des Risikos reden kann.
 Wichtig zu beachten ist jedoch auch, dass möglicherweise Befragte "In Ordnung" oder "Schlecht" angegeben haben, gerade weil sie eine Herzerkrankung haben. Dieser mögliche Bias muss bei der späteren Bewertung in Betracht gezogen werden.
-<Br>
+
 ![Alterskategorie-Graph](docs/GenHealth_plot.png)
 
 **Schlaganfall:**  
 Es existieren circa fünfmal so viele Herzerkrankte, die einen Schlaganfall hatten, wie Nichtherzerkrankte, die einen Schlaganfall hatten.
 Das deutet auf eine starke Korrelation zwischen Herzkrankheit und Schlaganfall hin, wodurch der Parameter "Schlaganfall" in Betracht gezogen werden kann.
-<Br>
+
 ![Alterskategorie-Graph](docs/Stroke.png)
 
 
