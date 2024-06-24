@@ -191,17 +191,24 @@ Das deutet auf eine starke Korrelation zwischen Herzkrankheit und Schlaganfall h
 
 
 ## PCA
-Die PCA-Bewertung wurde vorbereitet und das Skript wurde geschrieben, allerdings steht hier die genaue Auswertung und das Fine-Tuning noch aus, weswegen hierzu noch keine abschließende Aussage getroffen werden kann. Dies wird jedoch als nächster Schritt im Projekt anvisiert. Hauptsächlich soll PCA genutzt werden, um die manuelle Bewertung der Attribute (s.o.) zu bestätigen oder zu widerlegen.
+Um unsere manuelle Parameterbewertung validieren oder widerlegen zu können, nutzen wir einen statistischen Algorithmus (in diesem Fall PCA), um die wichtigsten Parameter errechnen zu können. Laut PCA sind die folgenden Parameter die wichtigsten für die Vorhersage einer Herzerkrankung.
+| Parametername  | Datenart      |
+| :-------------:  |:-------------:|
+| mentale Gesundheit       | Nummerisch     |
+| Schlafdauer       | Nummerisch     |
+| physische Gesundheit       | Nummerisch     |
+|BMI|Nummerisch|
+|Geschlecht|Kategoriell|
 
 ## Parameter-Fazit
 Im folgenden wird ein vorläufiges Fazit gezogen, da ein endgültiges Fazit erst mit dem Ende des Projekts gezogen werden kann.
-Weiterhin fehlen zur Endbewertung auch noch andere Konkurrenzmodelle zur logistischen Regression die vielleicht noch erprobt werden und die Bewertung mithilfe der PCA.
-Mit den aktuellen Parametern Alterskategorie, Schlafdauer, Nierenerkrankung, generelle Gesundheit und Schlaganfall, die momentan die wichtigsten Paramter zur Berechnung des Risikos darstellen kann man bereits jetzt einen Rückschluss zu den Projektzielen ziehen.
-Der wichtigste Punkt die einem hierbei ins Auge springt, ist, dass es immer Parameter geben wird, die nicht von Wearables oder Smartwatches gemessen werden können. Dadurch ist bereits jetzt ersichtlich, dass zusätzlich zu den Smartwatch-Paramtern noch eine Art Fragebogen existieren muss, mit dem der Betroffenen in Regelmäßigen Abständen befragt werden muss, allerdings kann diese Befragung über eine Anwendung der Smartwatch ablaufen, damit nicht noch ein zusätzliches Gerät von Nöten ist.
+Beim Nutzen der verschiedenen Parameter für das Machine-Learning-Modell ist aufgefallen, dass die manuell ausgewählten Parameter für unser Projekt bessere Werte erzielt haben, als die der PCA. Darum werden im Folgenden nur noch die manuellen Parameter genutzt.
+Mit den aktuellen Parametern Alterskategorie, Schlafdauer, Nierenerkrankung, generelle Gesundheit und Schlaganfall, die die wichtigsten Paramter zur Berechnung des Risikos darstellen kann man bereits jetzt einen Rückschluss zu den Projektzielen ziehen.
+Der wichtigste Punkt die einem hierbei ins Auge springt, ist, dass es immer Parameter geben wird, die nicht von Wearables oder Smartwatches gemessen werden können. Dadurch ist bereits jetzt ersichtlich, dass zusätzlich zu den Smartwatch-Paramtern noch eine Art Fragebogen existieren muss, mit dem der Betroffenen in regelmäßigen Abständen befragt werden muss, allerdings kann diese Befragung über eine Anwendung der Smartwatch ablaufen, damit nicht noch ein zusätzliches Gerät von Nöten ist.
 Zu diesen Parameter zählen bislang die Alterskategorie, die Nierenerkrankung, der Schlaganfall und die genrelle Gesundheit.
 Die Schlafdauer jedoch könnte über die Smartwatch gesteuert und dokumentiert werden.
 Damit wäre man in der Lage, durch dieselbe Anwendung, die auch die regelmäßigen Fragebögen steuert das Risiko berechnen zu lassen und damit die Projektziele größtenteils zu erfüllen.
-Zum einen wird dadurch die Prävention und Früherkennung von Herz-Kreislauf-Erkrankungen gefördert, denn Alarmfunktionen bei zu hohem Risiko würden den Nutzer warnen, dass sein Risiko erhöht ist und ihn Aufforderung bewusst darauf zu achten und möglicherweise ärztliche Beratung aufzusuchen.
+Zum einen wird dadurch die Prävention und Früherkennung von Herz-Kreislauf-Erkrankungen gefördert, denn Alarmfunktionen bei zu hohem Risiko würden den Nutzer warnen, dass sein Risiko erhöht ist und ihn auffordern bewusst darauf zu achten und möglicherweise ärztliche Beratung aufzusuchen.
 Dadurch wird der Nutzer automatisch für die eigene Gesundheit sensibilisiert und es werden indirekt auch Volkskrankheiten vermieden.
 
 # Architektur-Diagramm
@@ -215,8 +222,19 @@ In diesem Data-Science-Projekt zur Prävention von Herz-Kreislauf-Erkrankungen d
 ![Architektur-Diagramm](docs/architecture_diagramm.png)
 
 # Genutztes statistisches Modell
-Als statistisches Modell wird die logistische Regression genutzt. Es wurde sich für dieses Modell entschieden, da der Großteil der Daten kategoriell ist und somit viele der im Unterricht vorgestellten Modelle nicht mehr mit den vorliegenden Daten zu vereinen waren.
-Allerdings wurde sich noch nicht fest auf die logistische Regression geeinigt und im Verlauf des Projekts kann es durchaus sein, dass auch alternative Modelle noch betrachtet werden, vor Allem wenn die Ergebnisse mit der logistischen Regression nicht die gewünschte Genauigkeit erbringen.
+*Extreme Gradient Boosting (XGBoost)* ist ein Algorithmus für maschinelles Lernen, der sich durch seine hohe Genauigkeit, Geschwindigkeit und Flexibilität auszeichnet und daher für eine Vielzahl von Anwendungsgebieten geeignet ist.
+XGBoost basiert auf dem Prinzip des Gradient Boosting, bei dem mehrere schwache Entscheidungsbäume zu einem leistungsstarken Modell zusammengefügt werden.
+
+**Vorteile von XGBoost für dieses Projekt:**
+- *Hohe Genauigkeit:* XGBoost erreicht in der Regel höhere Vorhersagegenauigkeiten als vergleichbare Algorithmen, insbesondere bei komplexen Datensätzen wie dem vorliegenden Datensatz zu Herz-Kreislauf-Erkrankungen.
+- *Robustheit gegenüber imbalanced Data:* XGBoost ist robust gegenüber imbalanced Data, d.h. es kann auch mit Datensätzen umgehen, in denen die Anzahl der positiven und negativen Fälle stark ungleich verteilt ist. Dies ist in diesem Projekt relevant, da im Datensatz deutlich mehr Personen ohne Herzerkrankung als mit Herzerkrankung vorhanden sind. XGBoost lernt aus Fehlern und trifft gewichtete Entscheidungen, so dass die wenigen positiven Fälle stärker gewichtet werden und das Modell somit keine Verzerrung durch die ungleiche Verteilung erfährt.
+
+**Evaluierung des Modells:**
+Das gesamte Modell wurde mithilfe des Recalls getestet. Der Recall misst den Anteil der tatsächlichen positiven Fälle, die vom Modell korrekt als positiv identifiziert wurden.
+Im Falle dieses Projekts lag der Recall bei 99,6%. Das bedeutet, dass das Modell 99% der Personen, die tatsächlich an einer Herz-Kreislauf-Erkrankung leiden, korrekt identifiziert hat.
+
+**Ist dieser Recall ausreichend?**
+Ein Recall von 99,6% bedeutet, dass einer von 250 Herzerkrankten nicht richtig positiv identifiziert wird. Für unsere Projektziele ist das eine Quote, welche wir eingehen können, da wir regelmäßig die Werte mithilfe der Wearables abfragen oder messen. Dadurch kann es gut sein, dass diese Person, bei einer späteren Analyse ihrer Werte, wieder korrekt positiv identifiziert wird.
 
 
 # Haftungssauschluss
