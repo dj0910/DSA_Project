@@ -18,7 +18,7 @@ Das Ziel ist es hierbei eine Präventionsstrategie für Herzkrankheiten zu entwi
     4. [Parameter-Fazit](#Parameter-Fazit)
 7. [Architektur-Diagramm](#Architektur-Diagramm)
 8. [Genutztes statistisches Modell](#Genutztes-statistisches-Modell)
-9. [Haftungsausschluss](#Haftungsauschluss)
+9. [Haftungsausschluss](#Haftungsausschluss)
 10. [Grenzen des Modells](#grenzen-des-modells)
 11. [Fazit](#Fazit)
 12. [Ausblick](#Ausblick)
@@ -105,32 +105,44 @@ In diesem Fall könnten persönliche Fragen zur sportlichen Aktivität, zum Gewi
 Obwohl der Datensatz einen gewissen Bias aufweist, wurde er aufgrund seiner Aktualität (2023), seines Umfangs (über 300.000 Einträge) und der Vielzahl interessanter und gut messbarer Attribute ausgewählt.
 
 ## Beschreibung der Datenquelle
+|  | Beschreibung     |
+| :-------------  |:-------------|
+| **Link**     | https://www.kaggle.com/code/georgyzubkov/heart-disease-exploratory-data-analysis/notebook     |
+| **Datum**       | 14.05.2024     |
+| **Erstellungsjahr**       | 2023     |
+|**Art der Datensammlung**|Jährliche Telefonumfrage|
+|**Quelle**|Kaggle|
+|**Mögliche Arten von Bias**|Response-Bias|
+|**Vorteile**|+ Viele Datensätze <Br> + Attribute|
+|**Nachteile**|- Stark subjektive Attribute, wie „Sportliche Aktivität“ zum Beispiel|
 
 # Parameterbewertung
 
 
 ## Parameterübersicht
 Hier sind alle vorhandenen Parameter aufgelistet.
-| Parametername  | Datenart      |
-| :-------------:  |:-------------:|
-| Herzerkrankung       | Kategoriell     |
-| BMI       | Nummerisch     |
-| Rauchen       | Kategoriell     |
-|Alkoholkonsum|Kategoriell|
-|Schlaganfall|Kategoriell|
-|physische Gesundheit|Numerisch|
-|mentale Gesundheit|Numerisch|
-|Schwierigkeiten beim Laufen|Kategoriell|
-|Geschlecht|Kategoriell|
-|Alterskategorie|Kategoriell|
-|Ethnie|Kategoriell|
-|Diabetes|Kategoriell|
-|physische Aktivität|Kategoriell|
-|generelle Gesundheit|Kategoriell|
-|Schlafdauer|Numerisch|
-|Asthma|Kategoriell|
-|Nierenerkrankung|Kategoriell|
-|Hautkrebs|Kategoriell|
+| Parametername  |Beschreibung| Datenart      |Trifft Bias zu?|
+| :-------------:  |:-------------:|:-------------:|:-------------:|
+| Herzerkrankung       |  Liegt eine Herz-Erkrankung vor?    | Kategoriell| Nein |
+| BMI       |   Body-Mass-Index   |Nummerisch | Ja|
+| Rauchen       | Raucht der Befragte?     | Kategoriell| Ja|
+|Alkoholkonsum|Trinkt der Befragte?| Kategoriell| Ja|
+|Schlaganfall|Liegt ein Schlaganfall in der Vergangeheit?| Kategoriell|Nein |
+|physische Gesundheit|Wie oft im Monat fühlt der Befragte sich „physisch ungesund“?| Numerisch| Ja|
+|mentale Gesundheit|Wie oft im Monat fühlt der Befragte sich „mental ungesund“?| Numerisch| Ja|
+|Schwierigkeiten beim Laufen|Schwierigkeit, Treppen zu steigen.|Kategoriell | Ja|
+|Geschlecht|Geschlecht|Kategoriell |Nein |
+|Alterskategorie|Alters-Kategorie|Kategoriell |Nein |
+|Ethnie|Ethnie| Kategoriell|Nein |
+|Diabetes|Liegt eine Diabetes-Erkrankung vor?|Kategoriell |Nein |
+|physische Aktivität|Wurde in den letzten 30 Tagen Sport gemacht?|Kategoriell |Ja |
+|generelle Gesundheit|Wie „gesund“ fühlt sich der Befragte?|Kategoriell |Ja |
+|Schlafdauer|Wie viele Stunden Schlaf?|Numerisch | Ja|
+|Asthma|Liegt diagnostiziertes Asthma vor?|Kategoriell |Nein |
+|Nierenerkrankung|Liegt eine Nieren-Erkrankung vor?| Kategoriell|Nein |
+|Hautkrebs|Liegt diagnostizierter Hautkrebs vor?|Kategoriell |Nein |
+
+
 ## Manuelle Bewertung
 Diese Parameter wurden durch die Datenanalyse und -visualisierung manuell als relevante Risikofaktoren eingestuft.
 | Parametername  | Datenart      |
@@ -170,7 +182,7 @@ Als statistisches Modell wird die logistische Regression genutzt. Es wurde sich 
 Allerdings wurde sich noch nicht fest auf die logistische Regression geeinigt und im Verlauf des Projekts kann es durchaus sein, dass auch alternative Modelle noch betrachtet werden, vor Allem wenn die Ergebnisse mit der logistischen Regression nicht die gewünschte Genauigkeit erbringen.
 
 
-# Haftungsauschluss
+# Haftungssauschluss
 
 # Grenzen des Modells
 
