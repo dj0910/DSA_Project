@@ -144,14 +144,46 @@ Hier sind alle vorhandenen Parameter aufgelistet.
 
 
 ## Manuelle Bewertung
-Diese Parameter wurden durch die Datenanalyse und -visualisierung manuell als relevante Risikofaktoren eingestuft.
+Bevor Algorithmen zur Bewertung der Parameter genutzt werden, ist es wichtig erstmal ein Gefühl für die Abhängigkeiten und die Signifikanz der einzelnen Parameter zu bekommen. Deswegen wurden in der "Heart_2020_Exploration_Visualization"-Datei erstmal sämtliche Parameter univariativ, bivariativ und multivariativ analysiert. Nachdem die Analyse soweit abgeschlossen war, wurden sich alle Graphen genau angeschaut und die relevantesten in Bezug zu unseren Projektziele ermittelt. 
+Diese relevanten Parameter und ihre Analyse wurden hier nochmal zur Verdeutlichung eingefügt.  
+Im weiteren Verlauf des Projekts werden, sofern bei der algorithmischen Bewertung der Parameter keinen Anpassungen vorzunehmen sind, diese Parameter genutzt, um das Machine-Learning-Modell zu trainieren.
+
+Folgende Parameter wurden durch die Datenanalyse und -visualisierung manuell als relevante Risikofaktoren eingestuft.
 | Parametername  | Datenart      |
 | :-------------:  |:-------------:|
-| Alterkategorie       | Kategoriell     |
+| Alterskategorie       | Kategoriell     |
 | Schlafdauer       | Nummerisch     |
 | Nierenerkrankung       | Kategoriell     |
 |generelle Gesundheit|Kategoriell|
 |Schlaganfall|Kategoriell|
+
+<Br>
+
+**Alterskategorie:**
+Der Graph weist darauf hin, dass mit steigendem Alter die Wahrscheinlichkeit an einer Herzkrankheit zu erkranken um ein Vielfaches erhöht ist.
+Da der Prozentsatz in der Alterskategorie "80 oder älter" mehr als das 22-Fache der Kategorie "18-24" ist, ist die Alterskategorie als wichtiger Parameter für die Bewertung des Risikos zu sehen. 
+![Alterskategorie-Graph](docs/AgeCategory.png)
+
+**Schlafdauer:**
+Es ist eine wellenartige Form des Graphen zu erkennen, bei dem das Minimum bei 7 Stunden durchschnittlicher Schlafdauer liegt. Sowohl bei mehr als auch bei weniger Stunden Schlaf erhöht sich das Risiko an einer Herzkrankheit zu leiden stetig.
+Da der Unterschied bei bis zu 12% liegt, viele andere Schlafdauern ebenfalls erhöhte Wahrscheinlichkeiten zu erkranken aufweisen und die Schlafdauer eine einfach messbare Variable ist, wird sie mit hoher Signifikanz für die Bewertung des Risikos versehen.
+![Alterskategorie-Graph](docs/SleepTime_plot.png)
+
+**Nierenerkrankung:**
+Es existieren circa viermal so viele Herzerkrankte, die an einer Nierenerkrankung leiden, wie Nichtherzerkrankte, die an einer Nierenerkrankung leiden.
+Das deutet auf eine starke Korrelation zwischen Herzkrankheit und Nierenerkrankung hin, wodurch der Parameter "Nierenerkrankung" in Betracht gezogen werden kann.
+![Alterskategorie-Graph](docs/KidneyDisease_plot.png)
+
+**Generelle Gesundheit:**
+Die empfundene Gesundheit ist ein stark subjektiver Parameter. Jedoch ist der Unterschied zwischen dem besten und dem schlechtesten Gesundheitszustand so hoch, dass man hier trotzdem von einem signifikanten Parameter für die Bewertung des Risikos reden kann.
+Wichtig zu beachten ist jedoch auch, dass möglicherweise Befragte "In Ordnung" oder "Schlecht" angegeben haben, gerade weil sie eine Herzerkrankung haben. Dieser mögliche Bias muss bei der späteren Bewertung in Betracht gezogen werden.<br>
+![Alterskategorie-Graph](docs/GenHealth_plot.png)
+
+**Schlaganfall:**
+Es existieren circa fünfmal so viele Herzerkrankte, die einen Schlaganfall hatten, wie Nichtherzerkrankte, die einen Schlaganfall hatten.
+Das deutet auf eine starke Korrelation zwischen Herzkrankheit und Schlaganfall hin, wodurch der Parameter "Schlaganfall" in Betracht gezogen werden kann.
+![Alterskategorie-Graph](docs/Stroke.png)
+
 
 ## PCA
 Die PCA-Bewertung wurde vorbereitet und das Skript wurde geschrieben, allerdings steht hier die genaue Auswertung und das Fine-Tuning noch aus, weswegen hierzu noch keine abschließende Aussage getroffen werden kann. Dies wird jedoch als nächster Schritt im Projekt anvisiert. Hauptsächlich soll PCA genutzt werden, um die manuelle Bewertung der Attribute (s.o.) zu bestätigen oder zu widerlegen.
