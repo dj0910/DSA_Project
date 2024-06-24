@@ -161,7 +161,8 @@ Folgende Parameter wurden durch die Datenanalyse und -visualisierung manuell als
 
 **Alterskategorie:**  
 Der Graph weist darauf hin, dass mit steigendem Alter die Wahrscheinlichkeit an einer Herzkrankheit zu erkranken um ein Vielfaches erhöht ist.
-Da der Prozentsatz in der Alterskategorie "80 oder älter" mehr als das 22-Fache der Kategorie "18-24" ist, ist die Alterskategorie als wichtiger Parameter für die Bewertung des Risikos zu sehen.  
+Da der Prozentsatz in der Alterskategorie "80 oder älter" mehr als das 22-Fache der Kategorie "18-24" ist, ist die Alterskategorie als wichtiger Parameter für die Bewertung des Risikos zu sehen.
+  
 ![Alterskategorie-Graph](docs/AgeCategory.png)
 
 **Schlafdauer:**  
