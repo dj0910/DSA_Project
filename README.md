@@ -231,11 +231,11 @@ XGBoost basiert auf dem Prinzip des Gradient Boosting, bei dem mehrere schwache 
 - *Hohe Genauigkeit:* XGBoost erreicht in der Regel höhere Vorhersagegenauigkeiten als vergleichbare Algorithmen, insbesondere bei komplexen Datensätzen wie dem vorliegenden Datensatz zu Herz-Kreislauf-Erkrankungen.
 - *Robustheit gegenüber imbalanced Data:* XGBoost ist robust gegenüber imbalanced Data, d.h. es kann auch mit Datensätzen umgehen, in denen die Anzahl der positiven und negativen Fälle stark ungleich verteilt ist. Dies ist in diesem Projekt relevant, da im Datensatz deutlich mehr Personen ohne Herzerkrankung als mit Herzerkrankung vorhanden sind. XGBoost lernt aus Fehlern und trifft gewichtete Entscheidungen, so dass die wenigen positiven Fälle stärker gewichtet werden und das Modell somit keine Verzerrung durch die ungleiche Verteilung erfährt.
 
-**Evaluierung des Modells:**
+**Evaluierung des Modells:**  
 Das gesamte Modell wurde mithilfe des Recalls getestet. Der Recall misst den Anteil der tatsächlichen positiven Fälle, die vom Modell korrekt als positiv identifiziert wurden.
 Im Falle dieses Projekts lag der Recall bei 99,6%. Das bedeutet, dass das Modell 99% der Personen, die tatsächlich an einer Herz-Kreislauf-Erkrankung leiden, korrekt identifiziert hat.
 
-**Ist dieser Recall ausreichend?**
+**Ist dieser Recall ausreichend?**  
 Ein Recall von 99,6% bedeutet, dass einer von 250 Herzerkrankten nicht richtig positiv identifiziert wird. Für unsere Projektziele ist das eine Quote, welche wir eingehen können, da wir regelmäßig die Werte mithilfe der Wearables abfragen oder messen. Dadurch kann es gut sein, dass diese Person, bei einer späteren Analyse ihrer Werte, wieder korrekt positiv identifiziert wird.
 
 
