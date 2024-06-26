@@ -264,9 +264,24 @@ Die von Ihnen bereitgestellten Daten werden ausschließlich zur Analyse und Aufb
 Bei Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter [Ihre Kontakt-E-Mail-Adresse].
 
 # Grenzen des Modells
+Aussagekraft ist begrenzt auf die Hauptkomponenten, sprich Parameter die wir dem Modell gegeben haben um es zu trainieren.
+Recall- Wert ist zwar 99.6%, dafür sind aber die anderen Werte nicht so hoch, wie beeinflusst das die aussagekraft des modells und ist das schlimm?
 
+1. Überanpassung: Wie jedes Machine-Learning-Modell kann auch XGBoost anfällig für Überanpassung sein. Dies tritt auf, wenn das Modell die Trainingsdaten zu gut lernt und nicht in der Lage ist, gut auf neue, unbekannte Daten zu generalisieren. Um Überanpassung zu vermeiden, können verschiedene Techniken wie z. B. frühes Stoppen, Regularisierung und Validierungssatzaufteilung eingesetzt werden.
+
+2. Hohe Rechenzeit: Das Training eines XGBoost-Modells kann, insbesondere bei großen Datensätzen, rechenintensiv sein. Dies liegt an der iterativen Natur des Boosting-Verfahrens, bei dem mehrere Bäume sequenziell hinzugefügt werden. Um die Rechenzeit zu reduzieren, können verschiedene Techniken wie z. B. Subsampling, Sampling nach Zufälligkeit und frühes Stoppen eingesetzt werden.
+
+3. Schwierige Interpretation: XGBoost-Modelle können als "Black Boxes" angesehen werden, da es schwierig ist, die genauen Entscheidungen zu verstehen, die das Modell trifft. Dies kann es schwierig machen, die Ergebnisse des Modells zu interpretieren und zu verstehen, warum es bestimmte Vorhersagen trifft.
+
+4. Abhängigkeit von den Trainingsdaten: Die Leistung eines XGBoost-Modells hängt stark von der Qualität der Trainingsdaten ab. Wenn die Trainingsdaten verrauscht, unvollständig oder nicht repräsentativ für die realen Daten sind, kann die Leistung des Modells beeinträchtigt werden.
+
+5. Empfindlichkeit gegenüber Ausreißern: XGBoost-Modelle können durch Ausreißer in den Trainingsdaten beeinflusst werden. Dies kann zu verzerrten Ergebnissen führen. Um die Auswirkungen von Ausreißern zu verringern, können verschiedene Techniken wie z. B. Robuste Skalierung und Ausreißererkennung eingesetzt werden.
+
+6. Optimierung der Hyperparameter: Die Leistung eines XGBoost-Modells hängt stark von der Wahl der richtigen Hyperparameter ab. Diese Hyperparameter können einen großen Einfluss auf die Genauigkeit und Generalisierungsfähigkeit des Modells haben. Die Optimierung der Hyperparameter kann ein zeitaufwändiger und mühsamer Prozess sein.
 
 # Fazit
+Vor allem auf die Projektziele eingehen und die Wearables
+
 Mit den aktuellen Parametern Alterskategorie, Schlafdauer, Nierenerkrankung, generelle Gesundheit und Schlaganfall, die die wichtigsten Paramter zur Berechnung des Risikos darstellen kann man bereits jetzt einen Rückschluss zu den Projektzielen ziehen.
 Der wichtigste Punkt, der einem hierbei ins Auge springt, ist, dass es immer Parameter geben wird, die nicht von Wearables oder Smartwatches gemessen werden können. Dadurch ist bereits jetzt ersichtlich, dass zusätzlich zu den Smartwatch-Parametern noch eine Art Fragebogen existieren muss, mit dem der Betroffene in regelmäßigen Abständen befragt werden muss, allerdings kann diese Befragung über eine Anwendung der Smartwatch ablaufen, damit nicht noch ein zusätzliches Gerät von Nöten ist.
 Zu diesen Parameter zählen bislang die Alterskategorie, die Nierenerkrankung, der Schlaganfall und die generelle Gesundheit.
@@ -276,3 +291,5 @@ Zum einen wird dadurch die Prävention und Früherkennung von Herz-Kreislauf-Erk
 Dadurch wird der Nutzer automatisch für die eigene Gesundheit sensibilisiert und es werden indirekt auch Volkskrankheiten vermieden.
 
 # Ausblick
+vor allem auf mögliche App, vielleicht grobe Skizze aus Figma, wie eine Anwendung aussehen könnte, was hoffnungen für die Zukunft sind.
+zusätzlich zu dem ausgegebenen Riskiowert auch die Idee mit der Risikokurve erwähnen, wo man den Verlauf seines Risikos sieht und vielleicht Parameter anpassen kann, um zu sehen, wie sich einzelne Faktoren uaf das Gesamtrisiko auswirken?
