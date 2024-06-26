@@ -97,7 +97,7 @@ Diese Risikokurven sollen kontinuierlich aktualisiert und verfeinert werden, um 
 
 # Auswahl der Datenquelle
 Die Entscheidung über die Datenquelle orientierte sich an der „Checkliste für Datenakquise“ und es war wichtig, eine Mischung aus primären und sekundären Datenquellen zu erhalten. 
-Leider gestaltete sich der Zugriff auf medizinische Daten schwierig, wodurch die Auswahl der Datensätze generell sehr eingeschränkt war. 
+Leider gestaltete sich der Zugriff auf medizinische Daten schwierig, wodurch die Auswahl der Datensätze generell sehr eingeschränkt war. Anfangs standen zwei Datensätze zur Auswahl, jedoch wurde sich endgültig für einen der beiden Datensätze entschieden, weil der andere Datensatz eine zu kleine Stichprobengröße hatte und die Attribute nicht genau mit den Projektzielen vereinbar waren.
 Dabei wurde berücksichtigt, möglichst viele Attribute in den Datensätzen zu haben, um viele Risikofaktoren einzubeziehen und unterschiedlich gewichten zu können. Es war auch wichtig, keine leeren Beobachtungen in den Datensätzen zu haben, da sie den Datensatz verunreinigen können.  
 Auch ein Bias kann einen Datensatz verunreinigen, jedoch war es schwierig, Bias vollständig zu vermeiden. Im ausgewählten Datensatz gibt es einen Response-Bias, da es sich um eine Befragung handelt und nicht um wissenschaftlich erhobene Daten. 
 Dieser Bias tritt auf, wenn die Antworten in einer Umfrage oder Studie systematisch von bestimmten Faktoren beeinflusst werden, was zu einer Verzerrung der Ergebnisse führen kann. 
@@ -146,7 +146,7 @@ Hier sind alle vorhandenen Parameter aufgelistet.
 ## Manuelle Bewertung
 Bevor Algorithmen zur Bewertung der Parameter genutzt werden, ist es wichtig erstmal ein Gefühl für die Abhängigkeiten und die Signifikanz der einzelnen Parameter zu bekommen. Deswegen wurden in der "Heart_2020_Exploration_Visualization"-Datei erstmal sämtliche Parameter univariativ, bivariativ und multivariativ analysiert. Nachdem die Analyse soweit abgeschlossen war, wurden sich alle Graphen genau angeschaut und die relevantesten in Bezug zu unseren Projektziele ermittelt. 
 Diese relevanten Parameter und ihre Analyse wurden hier nochmal zur Verdeutlichung eingefügt.  
-Im weiteren Verlauf des Projekts werden, sofern bei der algorithmischen Bewertung der Parameter keinen Anpassungen vorzunehmen sind, diese Parameter genutzt, um das Machine-Learning-Modell zu trainieren.
+Im weiteren Verlauf des Projekts werden, sofern bei der algorithmischen Bewertung der Parameter keine Anpassungen vorzunehmen sind, diese Parameter genutzt, um das Machine-Learning-Modell zu trainieren.
 
 Folgende Parameter wurden durch die Datenanalyse und -visualisierung manuell als relevante Risikofaktoren eingestuft.
 | Parametername  | Datenart      |
@@ -191,7 +191,7 @@ Das deutet auf eine starke Korrelation zwischen Herzkrankheit und Schlaganfall h
 
 
 ## PCA
-Um unsere manuelle Parameterbewertung zu validieren oder zu widerlegen, verwenden wir einen statistischen Algorithmus namens Hauptkomponentenanalyse (PCA). Dieser Algorithmus ermöglicht es uns, die wichtigsten Parameter für die Vorhersage einer Herzerkrankung zu berechnen.
+Um unsere manuelle Parameterbewertung zu validieren oder zu widerlegen, verwenden wir einen statistischen Algorithmus namens Hauptkomponentenanalyse (PCA). Dieser Algorithmus ist sehr hilfreich bei dem uns vorliegenden Datensatz, da der Datensatz extrem viele Attribute besitzt, die teilweise auch untereinander korrelieren. Deswegen muss eine Dimensionsreduktion stattfinden, jedoch bestenfalls ohne Informationen zu verlieren. PCA ermöglicht es uns, die wichtigsten Parameter für die Vorhersage einer Herzerkrankung herauszufinden und eine möglichst große Varianz beizubehalten.
 Die PCA hat ergeben, dass folgende Parameter die größte Bedeutung für die Vorhersage haben:
 | Parametername  | Datenart      |
 | :-------------:  |:-------------:|
@@ -205,14 +205,13 @@ Diese Erkenntnisse helfen uns dabei, unsere manuelle Bewertung der Parameter zu 
 
 ## Parameter-Fazit
 Im folgenden wird ein vorläufiges Fazit gezogen, da ein endgültiges Fazit erst mit dem Ende des Projekts gezogen werden kann.
-Beim Nutzen der verschiedenen Parameter für das Machine-Learning-Modell ist aufgefallen, dass die manuell ausgewählten Parameter für unser Projekt bessere Werte erzielt haben, als die der PCA. Darum werden im Folgenden nur noch die manuellen Parameter genutzt.
-Mit den aktuellen Parametern Alterskategorie, Schlafdauer, Nierenerkrankung, generelle Gesundheit und Schlaganfall, die die wichtigsten Paramter zur Berechnung des Risikos darstellen kann man bereits jetzt einen Rückschluss zu den Projektzielen ziehen.
-Der wichtigste Punkt die einem hierbei ins Auge springt, ist, dass es immer Parameter geben wird, die nicht von Wearables oder Smartwatches gemessen werden können. Dadurch ist bereits jetzt ersichtlich, dass zusätzlich zu den Smartwatch-Paramtern noch eine Art Fragebogen existieren muss, mit dem der Betroffenen in regelmäßigen Abständen befragt werden muss, allerdings kann diese Befragung über eine Anwendung der Smartwatch ablaufen, damit nicht noch ein zusätzliches Gerät von Nöten ist.
-Zu diesen Parameter zählen bislang die Alterskategorie, die Nierenerkrankung, der Schlaganfall und die genrelle Gesundheit.
-Die Schlafdauer jedoch könnte über die Smartwatch gesteuert und dokumentiert werden.
-Damit wäre man in der Lage, durch dieselbe Anwendung, die auch die regelmäßigen Fragebögen steuert das Risiko berechnen zu lassen und damit die Projektziele größtenteils zu erfüllen.
-Zum einen wird dadurch die Prävention und Früherkennung von Herz-Kreislauf-Erkrankungen gefördert, denn Alarmfunktionen bei zu hohem Risiko würden den Nutzer warnen, dass sein Risiko erhöht ist und ihn auffordern bewusst darauf zu achten und möglicherweise ärztliche Beratung aufzusuchen.
-Dadurch wird der Nutzer automatisch für die eigene Gesundheit sensibilisiert und es werden indirekt auch Volkskrankheiten vermieden.
+Bei der Nutzung der verschiedenen Parameter für das Machine-Learning-Modell ist aufgefallen, dass die manuell ausgewählten Parameter für unser Projekt bessere Werte erzielt haben, als die der PCA.  
+Das kann an vielen verschiedenen Faktoren liegen, denn neben den Vorteilen der PCA hat diese natürlich auch Nachteile, auf die im Folgenden eingegangen wird.
+Als aller Erstes sollte gesagt werden, dass man PCA nicht auf jeden beliebigen Datensatz anwenden kann. Denn um den Algorithmus anwenden zu können, müssen die Daten bestenfalls annähernd normalerverteilt, intervallsskaliert und linear sein. Falls diese Voraussetzungen nicht gegeben sind, sind andere Algorithmen vielleicht besser geeignet. Weiterhin muss auch immer beachtet werden, dass die Auswahl der Komponenten von großer Bedeutung ist, denn hier entscheidet sich, wie gut sich die PCA anwenden lässt und auch, ob eventuell ein Informationsverlust bei falscher Auswahl der Komponenten passiert. In dem vorliegenden Datensatz sind  teilweise auch einige Ausreißer zu identifizieren, die auch zu einer Beeinflussung und damit zu einer Verzerrung der Ergebnisse der PCA führen können. Doch selbst wenn sämtliche der genannten Fehler vermieden werden, stellt die Interpretation der PCA dennoch eine Herausforderung dar, da die analysierten Hauptkomponenten nicht immer mit den Urspünglichen Variablen des Datensatzes zusammenhängen.(Quelle einfügen?)  
+
+Da einige dieser Nachteile bei dem uns vorliegenden Datensatz  eingetreten sind, mussten die PCA-Ergebnisse abschließend  mit denen der manuellen Bewertung verglichen und evaluiert werden. Hierbei fällt als erstes auf, dass es nur eine gemeinsame Hauptkomponente zwischen der manuellen und der algorithmischen Bewertung gibt, nämlich die Schlafdauer. Da diese von beiden Analysen als relevant gekennzeichnet wurde, wurde diese auch in die abschließenden Hauptkomponenten aufgenommen. Weiterhin wurden bei der PCA die Komponenten "mentale Gesundheit", "physische Gesundheit" und "BMI" als relevante Hauptkomponenten identifiziert. Hier wurde sich jedoch gegen diese Komponenten entschieden, da sie alle mit der Komponente "generelle Gesundheit" korrelieren und diese somit besser geeignet ist und in die Hauptkomponenten aufgenommen wurde. Zusätzlich wurde von der PCA das Geschlecht als wichtiger Parameter identifiziert. Dieser Parameter wurde in der abschließenden Bewertung verworfen und anstelle dessen das ALter mit aufgenommen, da die Daten hier diverser sind als nur "männlich" und "weiblich". Zuletzt wurden noch die Parameter "Nierenerkrankung" und "Schlaganfall" in die Hauptkomponenten aufgenommen, da diese in der manuellen Bewertung als relevant herausgestochen sind.
+Aus all den oben genannten Gründen werden im Folgenden nur noch die Parameter aus der manuellen Bewertung genutzt.
+
 
 # Architektur-Diagramm
 In diesem Data-Science-Projekt zur Prävention von Herz-Kreislauf-Erkrankungen durchlaufen wir folgende Schritte: 
@@ -241,9 +240,39 @@ Ein Recall von 99,6% bedeutet, dass einer von 250 Herzerkrankten nicht richtig p
 
 
 # Haftungssauschluss
+**Nutzung auf eigene Gefahr:**  
+Dieses Datenmodell wurde ausschließlich zu Forschungszwecken entwickelt und ist nicht für die Diagnose, Behandlung, Heilung oder Vorbeugung von Krankheiten zugelassen. Jegliche Nutzung des Datenmodells erfolgt auf eigenes Risiko. Der Entwickler übernimmt keinerlei Haftung für direkte oder indirekte Schäden, die aus der Anwendung oder Fehlanwendung des Datenmodells resultieren.
+
+**Keine medizinische Beratung:**  
+Die durch das Datenmodell generierten Ergebnisse stellen keine medizinische Beratung dar und sollten nicht als solche ausgelegt werden. Diese Ergebnisse dürfen nicht als Grundlage für gesundheitsbezogene Entscheidungen oder Maßnahmen herangezogen werden. Konsultieren Sie stets einen qualifizierten Gesundheitsdienstleister, bevor Sie Entscheidungen treffen, die Ihre Gesundheit betreffen.
+
+**Genauigkeit und Vollständigkeit:**  
+Obwohl das Datenmodell sorgfältig entwickelt und getestet wurde, übernimmt der Entwickler keine Gewährleistung für die Richtigkeit, Zuverlässigkeit, Aktualität oder Vollständigkeit der Ergebnisse. Das Datenmodell basiert auf anonymisierten Daten, weswegen es zu Fehlern, Ungenauigkeiten oder anderen Mängeln kommen kann, die zu falschen Schlussfolgerungen führen können. Weiterhin wurden die Vorhersagen nie von einer medizinischen Fachkraft auf Vollständigkeit und Korrektheit überprüft, sondern lediglich nach bestem Wissen und Gewissen erstellt.
+
+**Verantwortung des Benutzers:**  
+Benutzer des Datenmodells sind dafür verantwortlich, die Ergebnisse kritisch zu überprüfen und gegebenenfalls weitere professionelle medizinische Beratung einzuholen. Verlassen Sie sich nicht ausschließlich auf die durch das Datenmodell gelieferten Ergebnisse, um gesundheitliche Entscheidungen zu treffen.
+
+**Haftungsausschluss für Schäden:**  
+Der Entwickler haftet nicht für Schäden oder Verluste, die durch die Nutzung oder das Vertrauen auf die durch das Datenmodell bereitgestellten Informationen entstehen. Dies umfasst, ist aber nicht beschränkt auf, direkte, indirekte, zufällige oder Folgeschäden.
+
+**Keine Garantie:**  
+Es wird keine Garantie oder Zusicherung hinsichtlich der Eignung, Verfügbarkeit oder Leistungsfähigkeit des Datenmodells gegeben. Die Nutzung des Datenmodells erfolgt "wie besehen" ohne jegliche ausdrückliche oder stillschweigende Gewährleistungen, einschließlich, aber nicht beschränkt auf, die Gewährleistung der Marktgängigkeit und Eignung für einen bestimmten Zweck.```
+
+
+**Datenschutz:**  
+Die von Ihnen bereitgestellten Daten werden ausschließlich zur Analyse und Aufbereitung von Ergebnissen innerhalb dieses Forschungsprojekts verwendet. Wir erheben und verarbeiten nur die notwendigen Daten, um die Funktionalität des Datenmodells sicherzustellen und wissenschaftlich fundierte Ergebnisse zu erzeugen. Ihre Daten dienen ausschließlich analytischen Zwecken und werden nicht für andere Zwecke verwendet oder an Dritte weitergegeben, außer es ist gesetzlich vorgeschrieben. Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre Daten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen. Die Daten werden nur so lange gespeichert, wie dies für die genannten Zwecke erforderlich ist oder gesetzlich vorgeschrieben ist. Nach Erfüllung des Zwecks oder Ablauf der gesetzlichen Aufbewahrungsfristen werden die Daten gelöscht oder anonymisiert. Sie haben das Recht auf Auskunft, Berichtigung und Einschränkung der Verarbeitung und Löschung Ihrer Daten.  
+Bei Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter [Ihre Kontakt-E-Mail-Adresse].
 
 # Grenzen des Modells
 
+
 # Fazit
+Mit den aktuellen Parametern Alterskategorie, Schlafdauer, Nierenerkrankung, generelle Gesundheit und Schlaganfall, die die wichtigsten Paramter zur Berechnung des Risikos darstellen kann man bereits jetzt einen Rückschluss zu den Projektzielen ziehen.
+Der wichtigste Punkt, der einem hierbei ins Auge springt, ist, dass es immer Parameter geben wird, die nicht von Wearables oder Smartwatches gemessen werden können. Dadurch ist bereits jetzt ersichtlich, dass zusätzlich zu den Smartwatch-Parametern noch eine Art Fragebogen existieren muss, mit dem der Betroffene in regelmäßigen Abständen befragt werden muss, allerdings kann diese Befragung über eine Anwendung der Smartwatch ablaufen, damit nicht noch ein zusätzliches Gerät von Nöten ist.
+Zu diesen Parameter zählen bislang die Alterskategorie, die Nierenerkrankung, der Schlaganfall und die generelle Gesundheit.
+Die Schlafdauer jedoch könnte über die Smartwatch gesteuert und dokumentiert werden.
+Damit wäre man in der Lage, durch dieselbe Anwendung, die auch die regelmäßigen Fragebögen steuert das Risiko berechnen zu lassen und damit die Projektziele größtenteils zu erfüllen.
+Zum einen wird dadurch die Prävention und Früherkennung von Herz-Kreislauf-Erkrankungen gefördert, denn Alarmfunktionen bei zu hohem Risiko würden den Nutzer warnen, dass sein Risiko erhöht ist und ihn auffordern bewusst darauf zu achten und möglicherweise ärztliche Beratung aufzusuchen.
+Dadurch wird der Nutzer automatisch für die eigene Gesundheit sensibilisiert und es werden indirekt auch Volkskrankheiten vermieden.
 
 # Ausblick
