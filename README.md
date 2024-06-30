@@ -60,7 +60,7 @@ pip install -r docs/requirements.txt
 ```
 
 # Projektbeschreibung 
-Im Rahmen des Wahlpflichtmoduls Data Science and Analytics an der Hochschule Mannheim beschäfigen wir uns als Team Data Dazzlers, bestehend aus fünf Studierenden, intensiv mit dem Thema der Prävention von Herzkrankheiten. Diese Krankheiten zählen weltweit zu den führenden Todesursachen, wobei laut Angaben der Weltgesundheitsorganisation (WHO) bis zu 18 Millionen[<sup>1</sup>](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)) Menschen jährlich an ihnen sterben. In Deutschland allein sind jährlich etwa 350.000 Todesfälle[<sup>2</sup>](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen/_inhalt.html) aufgrund von Herz-Kreislauf-Erkrankungen zu verzeichnen, wie durch das statistische Bundesamt belegt wird. 
+Im Rahmen des Wahlpflichtmoduls Data Science and Analytics an der Hochschule Mannheim beschäfigen wir uns als Team Data Dazzlers, bestehend aus vier Studierenden, intensiv mit dem Thema der Prävention von Herzkrankheiten. Diese Krankheiten zählen weltweit zu den führenden Todesursachen, wobei laut Angaben der Weltgesundheitsorganisation (WHO) bis zu 18 Millionen[<sup>1</sup>](https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)) Menschen jährlich an ihnen sterben. In Deutschland allein sind jährlich etwa 350.000 Todesfälle[<sup>2</sup>](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen/_inhalt.html) aufgrund von Herz-Kreislauf-Erkrankungen zu verzeichnen, wie durch das statistische Bundesamt belegt wird. 
 Die Prävention dieser Erkrankungen spielt eine entscheidende Rolle im Gesundheitsmanagement. Hierbei kommen moderne Technologien und insbesondere Wearables wie Smartwatches ins Spiel. Diese ermöglichen es einem Individuum, seine Gesundheitsdaten kontinuierlich zu messen und auf Grundlage dieser Informationen entsprechend zu handeln. 
 Das Team Data Dazzlers konzentriert sich darauf, eine Präventionsstrategie für Herzkrankheiten zu entwickeln und zu optimieren. Ein zentraler Ansatzpunkt dabei ist die Untersuchung 
 physikalischer Risikofaktoren, die durch Wearables messbar sind. Durch die Analyse und Auswertung dieser Daten können frühzeitig potenzielle Risiken erkannt und präventive Maßnahmen eingeleitet werden. Hierbei kommt modernste Data-Science-Technologie zum Einsatz, um die Zusammenhänge zwischen den gemessenen physikalischen Parametern und dem Risiko für Herzkrankheiten zu erforschen und zu verstehen. Das Ziel ist es, präzise und individualisierte Empfehlungen für die Gesundheitsvorsorge zu entwickeln, die auf den individuellen Risikoprofilen der Nutzer basieren.
@@ -81,7 +81,7 @@ Dadurch, dass man in Arztpraxen nur noch schwer Termine bekommt und die Ärzte, 
 Durch Projekte wie diese, bei denen Betroffene auf einfache und bequeme Art und Weise einen Überblick über die eigene Gesundheit erhalten können, wird ihnen die Angst genommen und auch eine Richtung vorgegeben, an der sie sich orientieren können. Es kann sich sehr befreiend und stärkend anfühlen, die Kontrolle über die eigene Gesundheit zu haben und nicht auf fremde Hilfe angewiesen zu sein. Durch die Einfachheit solcher Anwendungen und die einfache Integration in den Alltag der Menschen beschäftigen sich diese wahrscheinlich mehr und auch lieber mit ihrer Gesundheit, als wenn solche Projekte nicht existieren würden und dadurch wird eine allgemein gesündere Bevölkerung angestrebt und gefördert.
 
 # Projektziele
-**a. Grundlegende Prävention von Herzkreislauferkrankungen**  
+**a. Grundlegende Prävention von Herz-Kreislauf-Erkrankungen**  
 Das Ziel ist es, eine ganzheitliche und effektive Präventionsstrategie für Herz-Kreislauf-Erkrankungen zu entwickeln. Dabei sollen nicht nur Risikofaktoren identifiziert und adressiert werden, sondern auch Maßnahmen zur Förderung eines gesunden Lebensstils und zur Reduzierung von Risikoverhalten ergriffen werden. Die Präventionsstrategie soll sowohl auf individueller Ebene als auch auf der Ebene der Gemeinschaft und der öffentlichen Gesundheit wirksam sein. Es sollen evidenzbasierte Interventionen entwickelt werden, die auf den spezifischen Bedürfnissen und Risikoprofilen der Zielgruppen basieren.
 
 **b. Bewertung der Aussagekraft von Wearables in Bezug auf Prävention von Herz-Kreislauf-Erkrankungen**  
@@ -282,16 +282,29 @@ Wie beeinflusst das die Aussagekraft des Modells und wo genau liegen die Grenzen
 
 
 # Fazit
-Vor allem auf die Projektziele eingehen und die Wearables
+**a. Grundlegende Prävention von Herz-Kreislauf-Erkrankungen**  
+Der Kern der Präventionsstrategie für Herz-Kreislauferkrankungen besteht aus dem in diesem Projekt entwickelten Modell. Hierbei ist mit einer 99,6% Wahrscheinlichkeit vorherzusagen, ob ein Mensch bald an einer Herzerkrankungen erkranken wird oder nicht. Dadurch ist eine grundlegende Prävention bereits gegeben. Zusätzlich dazu wird das Bewusstsein für die eigene Gesundheit indirekt sensibilisiert, da man durch das Nutzen so eines Modells oder einer Anwendung, die das gegebene Modell als Grundlage verwendet, viel öfter an die eigene Gesundheit, und was gut oder schlecht für diese ist, denkt und dementsprechend anders handelt. Dadurch entsteht also eine indirekte Förderung von gesundheitserhaltenden Maßnahmen und eine Sensibilisierung auf mögliches Risikoverhalten. Dadurch, dass die Anwendung (falls jemals veröffentlicht) kostenlos angeboten werden soll und die einzige Voraussetzung der Besitz eines Wearables/einer Smartwatch ist, ist somit die Prävention nicht nur für den Einzelnen, sondern auch für die breite Masse möglich, wodurch die Inzidenz von Volkskrankheiten, wie Herz-Kreislauf-Erkrankungen, hoffentlich zurückgeht.
 
-Mit den aktuellen Parametern Alterskategorie, Schlafdauer, Nierenerkrankung, generelle Gesundheit und Schlaganfall, die die wichtigsten Paramter zur Berechnung des Risikos darstellen kann man bereits jetzt einen Rückschluss zu den Projektzielen ziehen.
+
+**b. Bewertung der Aussagekraft von Wearables in Bezug auf Prävention von Herz-Kreislauf-Erkrankungen**  
+Mit den aktuellen Parametern Alterskategorie, Schlafdauer, Nierenerkrankung, generelle Gesundheit und Schlaganfall, die die wichtigsten Parameter zur Berechnung des Risikos darstellen, kann man bereits jetzt einen Rückschluss zu der Nutzung dieser in Bezug auf Wearables und Smartwatches ziehen.
 Der wichtigste Punkt, der einem hierbei ins Auge springt, ist, dass es immer Parameter geben wird, die nicht von Wearables oder Smartwatches gemessen werden können. Dadurch ist bereits jetzt ersichtlich, dass zusätzlich zu den Smartwatch-Parametern noch eine Art Fragebogen existieren muss, mit dem der Betroffene in regelmäßigen Abständen befragt werden muss, allerdings kann diese Befragung über eine Anwendung der Smartwatch ablaufen, damit nicht noch ein zusätzliches Gerät von Nöten ist.
-Zu diesen Parameter zählen bislang die Alterskategorie, die Nierenerkrankung, der Schlaganfall und die generelle Gesundheit.
-Die Schlafdauer jedoch könnte über die Smartwatch gesteuert und dokumentiert werden.
-Damit wäre man in der Lage, durch dieselbe Anwendung, die auch die regelmäßigen Fragebögen steuert das Risiko berechnen zu lassen und damit die Projektziele größtenteils zu erfüllen.
-Zum einen wird dadurch die Prävention und Früherkennung von Herz-Kreislauf-Erkrankungen gefördert, denn Alarmfunktionen bei zu hohem Risiko würden den Nutzer warnen, dass sein Risiko erhöht ist und ihn auffordern bewusst darauf zu achten und möglicherweise ärztliche Beratung aufzusuchen.
+Zu diesen Parametern zählen bislang die Nierenerkrankung, der Schlaganfall und die generelle Gesundheit.
+Das Alter sollte bereits im Profil der Smartwatch hinterlegt sein und die Schlafdauer könnte über die Smartwatch gesteuert und dokumentiert werden.
+Damit wäre man in der Lage, durch dieselbe Anwendung, die auch die regelmäßigen Fragebögen steuert, das Risiko berechnen zu lassen und damit dieses Projektziel größtenteils zu erfüllen.  
+Dadurch würde ebenfalls die Prävention und Früherkennung von Herz-Kreislauf-Erkrankungen gefördert werden, denn Alarmfunktionen bei zu hohem Risiko würden den Nutzer warnen, dass sein Risiko erhöht ist und ihn auffordern bewusst darauf zu achten und möglicherweise ärztliche Beratung aufzusuchen.
 Dadurch wird der Nutzer automatisch für die eigene Gesundheit sensibilisiert und es werden indirekt auch Volkskrankheiten vermieden.
+Abschließend lässt sich also sagen, dass Wearables und Smartwatches eine komfortable und einfache Lösung bieten, mit der die Projektziele zu erreichen und umzusetzen sind.
+
+**c. Top 2-3 Risikofaktoren ausgeben/d. Verlaufskurve für das weitere Risiko**  
+ Aufgrund des zeitlichen Rahmens des Projekts und der Priorisierung und Schwerpunktsetzung der einzelnen Features, konnten diese beiden Projektziele noch nicht umgesetzt werden.   Trotzdem sind sie noch wünschenswert und tragen zu dem Gesamtkonzept und der Vision des Projekts bei, weswegen sie nicht verworfen werden sollten und deswegen im "Ausblick" näher auf diese beiden Punkte eingegangen wird.
+
+
+ Alles in allem wurden die Kernziele des Projekts sehr gut umgesetzt, das Modell sagt mit einer sehr hohen Sensitivität die Herzerkrankungen vorraus, es kann zusammen mit Wearables und Smartwatches verwendet werden und es dient nicht nur dem Einzelnen, sondern auch der Gesellschaft als solches, um länger gesund und vital leben zu können.
+
 
 # Ausblick
 vor allem auf mögliche App, vielleicht grobe Skizze aus Figma, wie eine Anwendung aussehen könnte, was hoffnungen für die Zukunft sind.
 zusätzlich zu dem ausgegebenen Riskiowert auch die Idee mit der Risikokurve erwähnen, wo man den Verlauf seines Risikos sieht und vielleicht Parameter anpassen kann, um zu sehen, wie sich einzelne Faktoren uaf das Gesamtrisiko auswirken?
+
+tägliche Erinnerungen durch facts wie, wenn du heute sport machst, senkst du dein Riskio um .. %
