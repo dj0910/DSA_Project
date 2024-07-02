@@ -265,7 +265,7 @@ Bei Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter [Ihr
 
 # Grenzen des Modells
 Die Aussagekraft des Modells ist begrenzt auf die Hauptkomponenten, sprich die Parameter die dem Modell gegeben worden sind, um es zu trainieren.
-Der Recall-Wert beträgt zwar 99.6%, dafür sind aber die anderen Werte, wie die Genauigkeit, die Präzension und der F1-Score nicht so hoch, denn sie sind alle ungefähr bei 92%.  
+Der Recall-Wert beträgt zwar 99.6%, dafür sind aber die anderen Werte, wie die Genauigkeit, die Präzesion und der F1-Score nicht so hoch, denn sie sind alle ungefähr bei 92%.  
 Wie beeinflusst das die Aussagekraft des Modells und wo genau liegen die Grenzen des Modells?
 
 **1. Überanpassung:**  
@@ -283,7 +283,7 @@ Wie beeinflusst das die Aussagekraft des Modells und wo genau liegen die Grenzen
 
 # Fazit
 **a. Grundlegende Prävention von Herz-Kreislauf-Erkrankungen**  
-Der Kern der Präventionsstrategie für Herz-Kreislauferkrankungen besteht aus dem in diesem Projekt entwickelten Modell. Hierbei ist mit einer 99,6% Wahrscheinlichkeit vorherzusagen, ob ein Mensch bald an einer Herzerkrankungen erkranken wird oder nicht. Dadurch ist eine grundlegende Prävention bereits gegeben. Zusätzlich dazu wird das Bewusstsein für die eigene Gesundheit indirekt sensibilisiert, da man durch das Nutzen so eines Modells oder einer Anwendung, die das gegebene Modell als Grundlage verwendet, viel öfter an die eigene Gesundheit, und was gut oder schlecht für diese ist, denkt und dementsprechend anders handelt. Dadurch entsteht also eine indirekte Förderung von gesundheitserhaltenden Maßnahmen und eine Sensibilisierung auf mögliches Risikoverhalten. Dadurch, dass die Anwendung (falls jemals veröffentlicht) kostenlos angeboten werden soll und die einzige Voraussetzung der Besitz eines Wearables/einer Smartwatch ist, ist somit die Prävention nicht nur für den Einzelnen, sondern auch für die breite Masse möglich, wodurch die Inzidenz von Volkskrankheiten, wie Herz-Kreislauf-Erkrankungen, hoffentlich zurückgeht.
+Der Kern der Präventionsstrategie für Herz-Kreislauf-Erkrankungen besteht aus dem in diesem Projekt entwickelten Modell. Hierbei ist mit einer 99,6% Wahrscheinlichkeit vorherzusagen, ob ein Mensch bald an einer Herzerkrankungen erkranken wird oder nicht. Dadurch ist eine grundlegende Prävention bereits gegeben. Zusätzlich dazu wird das Bewusstsein für die eigene Gesundheit indirekt sensibilisiert, da man durch das Nutzen so eines Modells oder einer Anwendung, die das gegebene Modell als Grundlage verwendet, viel häufiger an die eigene Gesundheit, und was gut oder schlecht für diese ist, denkt und dementsprechend anders handelt. Dadurch entsteht also eine indirekte Förderung von gesundheitserhaltenden Maßnahmen und eine Sensibilisierung auf mögliches Risikoverhalten. Dadurch, dass die Anwendung (falls jemals veröffentlicht) kostenlos angeboten werden soll und die einzige Voraussetzung der Besitz eines Wearables oder einer Smartwatch ist, ist somit die Prävention nicht nur für den Einzelnen, sondern auch für die breite Masse möglich, wodurch die Inzidenz von Volkskrankheiten, wie Herz-Kreislauf-Erkrankungen, hoffentlich zurückgeht.
 
 
 **b. Bewertung der Aussagekraft von Wearables in Bezug auf Prävention von Herz-Kreislauf-Erkrankungen**  
@@ -297,10 +297,10 @@ Dadurch wird der Nutzer automatisch für die eigene Gesundheit sensibilisiert un
 Abschließend lässt sich also sagen, dass Wearables und Smartwatches eine komfortable und einfache Lösung bieten, mit der die Projektziele zu erreichen und umzusetzen sind.
 
 **c. Top 2-3 Risikofaktoren ausgeben/d. Verlaufskurve für das weitere Risiko**  
- Aufgrund des zeitlichen Rahmens des Projekts und der Priorisierung und Schwerpunktsetzung der einzelnen Features, konnten diese beiden Projektziele noch nicht umgesetzt werden.   Trotzdem sind sie noch wünschenswert und tragen zu dem Gesamtkonzept und der Vision des Projekts bei, weswegen sie nicht verworfen werden sollten und deswegen im "Ausblick" näher auf diese beiden Punkte eingegangen wird.
+ Aufgrund des zeitlichen Rahmens des Projekts und der Priorisierung und Schwerpunktsetzung der einzelnen Features, konnten diese beiden Projektziele noch nicht umgesetzt werden. Trotzdem sind sie noch wünschenswert und tragen zu dem Gesamtkonzept und der Vision des Projekts bei, weswegen sie nicht verworfen werden sollten und deswegen im "Ausblick" näher auf diese beiden Punkte eingegangen wird.
 
 
- Alles in allem wurden die Kernziele des Projekts sehr gut umgesetzt, das Modell sagt mit einer sehr hohen Sensitivität die Herzerkrankungen vorraus, es kann zusammen mit Wearables und Smartwatches verwendet werden und es dient nicht nur dem Einzelnen, sondern auch der Gesellschaft als solches, um länger gesund und vital leben zu können.
+ Alles in Allem wurden die Kernziele des Projekts sehr gut umgesetzt, das Modell sagt mit einer sehr hohen Sensitivität die Herzerkrankungen vorraus, es kann zusammen mit Wearables und Smartwatches verwendet werden und es dient nicht nur dem Einzelnen, sondern auch der Gesellschaft als solches, um länger gesund und vital leben zu können.
 
 
 # Ausblick
