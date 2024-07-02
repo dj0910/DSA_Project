@@ -189,7 +189,7 @@ Das deutet auf eine starke Korrelation zwischen Herzkrankheit und Schlaganfall h
 ![Alterskategorie-Graph](docs/Stroke.png)
 
 
-## PCA
+
 Um unsere manuelle Parameterbewertung zu validieren oder zu widerlegen, verwenden wir einen statistischen Algorithmus namens Hauptkomponentenanalyse (PCA). Dieser Algorithmus ist sehr hilfreich bei dem uns vorliegenden Datensatz, da dieser extrem viele Attribute besitzt, die teilweise auch untereinander korrelieren. Deswegen muss eine Dimensionsreduktion stattfinden, jedoch bestenfalls ohne Informationen zu verlieren. PCA ermöglicht es uns, die wichtigsten Parameter für die Vorhersage einer Herzerkrankung herauszufinden und eine möglichst große Varianz beizubehalten.
 Die PCA hat ergeben, dass folgende Parameter die größte Bedeutung für die Vorhersage haben:
 | Parametername  | Datenart      |
