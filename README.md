@@ -4,7 +4,7 @@ Das Ziel ist es hierbei eine Präventionsstrategie für Herzkrankheiten zu entwi
 
 # Inhaltsverzeichnis
 1. [Repo-Navigation](#Repo-Navigation)
-    1. [Übersicht](#Uebersicht)
+    1. [Übersicht](#Übersicht)
     2. [Installationsanleitung](#Installationsanleitung)
 2. [Projektbeschreibung](#Projektbeschreibung)
 3. [Mögliche Lösungen für das Problem](#Mögliche-Lösungen-für-das-Problem)
@@ -12,7 +12,7 @@ Das Ziel ist es hierbei eine Präventionsstrategie für Herzkrankheiten zu entwi
 5. [Auswahl der Datenquelle](#Auswahl-der-Datenquelle)
     1. [Beschreibung der Datenquelle](#beschreibung-der-datenquelle)
 6. [Parameterbewertung](#Parameterbewertung)
-    1. [Parameterübersicht](#Parameterubersicht)
+    1. [Parameterübersicht](#Parameterübersicht)
     2. [Manuelle Bewertung](#Manuelle-Bewertung)
     3. [PCA](#PCA)
     4. [Parameter-Fazit](#Parameter-Fazit)
@@ -239,7 +239,7 @@ Im Falle dieses Projekts lag der Recall bei 99,6%. Das bedeutet, dass das Modell
 Ein Recall von 99,6% bedeutet, dass einer von 250 Herzerkrankten nicht richtig positiv identifiziert wird. Für unsere Projektziele ist das eine Quote, welche wir eingehen können, da wir regelmäßig die Werte mithilfe der Wearables abfragen oder messen. Dadurch kann es gut sein, dass diese Person, bei einer späteren Analyse ihrer Werte, wieder korrekt positiv identifiziert wird.
 
 
-# Haftungssauschluss
+# Haftungsausschluss
 **Nutzung auf eigene Gefahr:**  
 Dieses Datenmodell wurde ausschließlich zu Forschungszwecken entwickelt und ist nicht für die Diagnose, Behandlung, Heilung oder Vorbeugung von Krankheiten zugelassen. Jegliche Nutzung des Datenmodells erfolgt auf eigenes Risiko. Der Entwickler übernimmt keinerlei Haftung für direkte oder indirekte Schäden, die aus der Anwendung oder Fehlanwendung des Datenmodells resultieren.
 
