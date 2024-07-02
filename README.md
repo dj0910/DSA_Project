@@ -304,7 +304,17 @@ Abschließend lässt sich also sagen, dass Wearables und Smartwatches eine komfo
 
 
 # Ausblick
-vor allem auf mögliche App, vielleicht grobe Skizze aus Figma, wie eine Anwendung aussehen könnte, was Hoffnungen für die Zukunft sind.
-Zusätzlich zu dem ausgegebenen Risikowert auch die Idee mit der Risikokurve erwähnen, wo man den Verlauf seines Risikos sieht und vielleicht Parameter anpassen kann, um zu sehen, wie sich einzelne Faktoren auf das Gesamtrisiko auswirken?
+Die wichtigsten Punkte, die im Ausblick beleuchtet werden sollen, sind die nicht erfüllten Projektziele. Neben dem allgemeinen Risiko, das eine Aussage zu dem Vorhandensein einer Herzerkrankung trifft, sollen dem Nutzer hier auch die Top-Risikofaktoren ausgegeben werden, um eine konkrete Aussage zu den Veränderungen, die vorgenommen werden müssen, um das Risiko des Nutzers zu senken, treffen zu können. Im Folgenden ist ein beispielhaftes Wireframe zu sehen, anhand dessen man sich die spätere Anwendung visualisieren kann. Hierbei ist der Titel der App, das allgemeine Risiko, die Top-Risikofaktoren und eine Warnung zu sehen, die ausgegeben wird, weil das allgemeine Risiko aktuell zu hoch ist.
 
-tägliche Erinnerungen durch facts wie, wenn du heute sport machst, senkst du dein Riskio um .. %
+![Architektur-Diagramm](docs/Wireframe_Top_Risiko.png)
+
+Weiterhin soll es zukünftig auch eine Risikokurve geben, die das Risiko im Verlauf der Zeit aufzeigt und eventuell sogar die Möglichkeit bietet, Parameter anzupassen und somit eine "Vorschau" auf seine Zukunft zu bekommen, je nachdem ob man seinen Lifestyle anpasst oder eben nicht. Im Folgenden ist ein beispielhaftes Wireframe zu sehen, anhand dessen man sich die spätere Anwendung visualisieren kann. Zu sehen ist hierbei das allgemeine, aktuelle Risiko und die Risikokurve, die später interaktiv anklickbar sein sollen, und ein Button mit "Parameter anpassen". Wenn auf diesen Button geklickt  wird, kommt der Nutzer auf ein Bedienpanel, auf dem er die Parameter beliebig anpassen kann und dies dann auf die Risikokurve anwenden lassen kann, um zu sehen was die angepassten Parameter für einen Einfluss auf den Verlauf des Risikos haben.
+
+![Architektur-Diagramm](docs/Wireframe_Risikokurve.png) ![Architektur-Diagramm](docs/Wireframe_Parameter_anpassen.png)
+
+Zu den beiden oberen Punkten ist allerdings zu erwähnen, dass diese ausschließlich in Form einer Appanwendung umsetzbar sind, in der dann die verschiedenen Features zusätzlich zu dem bereits erwähnten Fragebogen verwaltet und einsehbar sind. Im Folgenden ist ein beispielhaftes Wireframe des Fragebogens, bzw. einer einzelnen Frage, zu sehen, der in regelmäßigen Abständen als Pop-Up in der Anwendung auftauchen wird, um die Daten aktuell zu halten und eine möglichst genaue Vorhersage zu gewährleisten.
+
+![Architektur-Diagramm](docs/Wireframe_Fragebogen.png)
+
+Schlussendlich ist es ebenfalls wichtig sich ein App-Konzept zu überlegen, mit ansprechendem Design, einer App-Philosophie und geregelten Erinnerungen bezüglich des Fragebogens und der Risikominimierung. Weiterhin entsteht auch die Frage, ob mit einem qualitativ und quantitativ höherem Datensatz eine bessere Auswahl an Attributen existiert, wie auch bessere Endergebnisse. Diese Frage lässt sich jedoch nur in einem größeren Projekt, mit mehr zeitlichen, personellen, sowie wissenschftlichen Ressourcen erforschen.
+Alles in Allem könnte aus diesem Projekt, wenn all diese Punkte erfüllt sind, eine Anwendung entstehen, die maßgeblich zu der Aufklärung und teilweise auch zu der Lösung und Senkung der hohen Inzidenz der Herz-Kreislauf-Erkrankungen beitragen kann.
