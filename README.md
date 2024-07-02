@@ -312,11 +312,11 @@ Weiterhin soll es zukünftig auch eine Risikokurve geben, die das Risiko im Verl
 
 ![Architektur-Diagramm](docs/Wireframe_Risikokurve.png) ![Architektur-Diagramm](docs/Wireframe_Parameter_anpassen.png)
 
-Zu den beiden oberen Punkten ist allerdings zu erwähnen, dass diese ausschließlich in Form einer Appanwendung umsetzbar sind, in der dann die verschiedenen Features zusätzlich zu dem bereits erwähnten Fragebogen verwaltet und einsehbar sind. Dies könnte zum Beispiel mithilfe von Frameworks, wie "Tensorflow" umgesetzt werden.  
+Zu den beiden oberen Punkten ist allerdings zu erwähnen, dass diese ausschließlich in Form einer Anwendung umsetzbar sind, in der dann die verschiedenen Features zusätzlich zu dem bereits erwähnten Fragebogen verwaltet und einsehbar sind. Dies könnte zum Beispiel mithilfe von Frameworks, wie "Tensorflow" umgesetzt werden.  
 Im Folgenden ist ein beispielhaftes Wireframe des Fragebogens, bzw. einer einzelnen Frage, zu sehen, der in regelmäßigen Abständen als Pop-Up in der Anwendung auftauchen wird, um die Daten aktuell zu halten und eine möglichst genaue Vorhersage zu gewährleisten.
 
 ![Architektur-Diagramm](docs/Wireframe_Fragebogen.png)
 
-Schlussendlich ist es ebenfalls wichtig sich ein App-Konzept zu überlegen, mit ansprechendem Design, einer App-Philosophie und geregelten Erinnerungen bezüglich des Fragebogens und der Risikominimierung. Weiterhin entsteht auch die Frage, ob mit einem qualitativ und quantitativ höherem Datensatz eine bessere Auswahl an Attributen existiert, wie auch bessere Endergebnisse. Diese Frage lässt sich jedoch nur in einem größeren Projekt, mit mehr zeitlichen, personellen, sowie wissenschftlichen Ressourcen erforschen.
+Ebenfalls ist es wichtig sich ein App-Konzept zu überlegen, mit ansprechendem Design, einer App-Philosophie und geregelten Erinnerungen bezüglich des Fragebogens und der Risikominimierung. Weiterhin entsteht auch die Frage, ob mit einem qualitativ und quantitativ höherem Datensatz eine bessere Auswahl an Attributen existiert, wie auch bessere Endergebnisse. Diese Frage lässt sich jedoch nur in einem größeren Projekt, mit mehr zeitlichen, personellen, sowie wissenschftlichen Ressourcen erforschen.
 
-Alles in Allem könnte aus diesem Projekt, wenn all diese Punkte erfüllt sind, eine Anwendung entstehen, die maßgeblich zu der Aufklärung und teilweise auch zu der Lösung und Senkung der hohen Inzidenz der Herz-Kreislauf-Erkrankungen beitragen kann.
+Das Projekt hat, nach Erfüllung der genannten Punkte, das Potenzial zu einer Anwendung zu werden, die maßgeblich zu der Aufklärung und damit auch zu der Lösung und Senkung der hohen Inzidenz der Herz-Kreislauf-Erkrankungen beitragen kann.
