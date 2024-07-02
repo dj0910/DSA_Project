@@ -29,7 +29,7 @@ data_survey_dropped_na = data_survey.dropna(how="any")
 data_survey_dropped_na["PhysicalHealth"] = data_survey_dropped_na["PhysicalHealth"].astype(int) 
 data_survey_dropped_na["MentalHealth"] = data_survey_dropped_na["MentalHealth"].astype(int)
 
-#TODO: ALLE ENGLISCHSPRACHIGEN INFORMATIONEN AUS DEM DATENSATZ ÜBERSEZEN(WICHTIG FÜR GRAPHEN)
+#Alle englischsprachigen Variablen werden übersetzt, wichtig für spätere Visualisierung
 
 data_survey_dropped_na["HeartDisease"][data_survey_dropped_na["HeartDisease"] == "Yes"] = "Ja"
 data_survey_dropped_na["HeartDisease"][data_survey_dropped_na["HeartDisease"] == "No"] = "Nein"
