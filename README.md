@@ -312,7 +312,8 @@ Weiterhin soll es zukünftig auch eine Risikokurve geben, die das Risiko im Verl
 
 ![Architektur-Diagramm](docs/Wireframe_Risikokurve.png) ![Architektur-Diagramm](docs/Wireframe_Parameter_anpassen.png)
 
-Zu den beiden oberen Punkten ist allerdings zu erwähnen, dass diese ausschließlich in Form einer Appanwendung umsetzbar sind, in der dann die verschiedenen Features zusätzlich zu dem bereits erwähnten Fragebogen verwaltet und einsehbar sind. Im Folgenden ist ein beispielhaftes Wireframe des Fragebogens, bzw. einer einzelnen Frage, zu sehen, der in regelmäßigen Abständen als Pop-Up in der Anwendung auftauchen wird, um die Daten aktuell zu halten und eine möglichst genaue Vorhersage zu gewährleisten.
+Zu den beiden oberen Punkten ist allerdings zu erwähnen, dass diese ausschließlich in Form einer Appanwendung umsetzbar sind, in der dann die verschiedenen Features zusätzlich zu dem bereits erwähnten Fragebogen verwaltet und einsehbar sind. Dies könnte zum Beispiel mithilfe von Frameworks, wie "Tensorflow" umgesetzt werden.  
+Im Folgenden ist ein beispielhaftes Wireframe des Fragebogens, bzw. einer einzelnen Frage, zu sehen, der in regelmäßigen Abständen als Pop-Up in der Anwendung auftauchen wird, um die Daten aktuell zu halten und eine möglichst genaue Vorhersage zu gewährleisten.
 
 ![Architektur-Diagramm](docs/Wireframe_Fragebogen.png)
 
